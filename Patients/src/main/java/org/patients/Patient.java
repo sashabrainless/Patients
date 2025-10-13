@@ -37,7 +37,7 @@ public class Patient {
     /**
      * Номер телефону пацієнта
      */
-    private String phone = null;
+    private String phoneNumber = null;
     /**
      * Діагноз пацієнта
      */
@@ -51,112 +51,89 @@ public class Patient {
 
     /**
      * Варіант конструктора з параметрами
-     * @param pID ID пацієнта
-     * @param pFirstName ім'я пацієнта
-     * @param pMiddleName по батькові пацієнта
-     * @param pLastName прізвище пацієнта
-     * @param pAddress адреса пацієнта
-     * @param pPhone номер телефону пацієнта
-     * @param pMedicalRecordNumber номер медичної картки пацієнта
-     * @param pDiagnosis діагноз пацієнта
+     * @param id пацієнта
+     * @param firstName ім'я пацієнта
+     * @param middleName по батькові пацієнта
+     * @param lastName прізвище пацієнта
+     * @param address адреса пацієнта
+     * @param phoneNumber номер телефону пацієнта
+     * @param medicalRecordNumber номер медичної картки пацієнта
+     * @param diagnosis діагноз пацієнта
      */
-    Patient(int pID, String pFirstName, String pMiddleName, String pLastName,
-                         String pAddress, String pPhone, int pMedicalRecordNumber, String pDiagnosis) {
-        this.id = pID;
-        this.firstName = pFirstName;
-        this.middleName = pMiddleName;
-        this.lastName = pLastName;
-        this.address = pAddress;
-        this.phone = pPhone;
-        this.medicalRecordNumber = pMedicalRecordNumber;
-        this.diagnosis = pDiagnosis;
-    }
-
-    /**
-     * Варіант конструктора з параметрами
-     * @param pID ID пацієнта
-     * @param pFirstName ім'я пацієнта
-     * @param pMiddleName по батькові пацієнта
-     * @param pLastName прізвище пацієнта
-     * @param pAddress адреса пацієнта
-     * @param pPhone номер телефону пацієнта
-     * @param pMedicalRecordNumber номер медичної картки пацієнта
-     * @param pDiagnosis діагноз пацієнта
-     */
-    public void setValue(int pID, String pFirstName, String pMiddleName, String pLastName,
-                         String pAddress, String pPhone, int pMedicalRecordNumber, String pDiagnosis) {
-        id = pID;
-        firstName = pFirstName;
-        middleName = pMiddleName;
-        lastName = pLastName;
-        address = pAddress;
-        phone = pPhone;
-        medicalRecordNumber = pMedicalRecordNumber;
-        diagnosis = pDiagnosis;
+    Patient(int id, String firstName, String middleName, String lastName,
+            String address, String phoneNumber, int medicalRecordNumber, String diagnosis) {
+        this.id = id;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.medicalRecordNumber = medicalRecordNumber;
+        this.diagnosis = diagnosis;
     }
 
     /**
      * Запис ID
-     * @param pID ID пацієнта
+     * @param id пацієнта
      */
-    public void setID(int pID) {
-        this.id = pID;
+    public void setID(int id) {
+        this.id = id;
     }
 
     /**
      * Запис імені
-     * @param pFirstName ім'я пацієнта
+     * @param firstName ім'я пацієнта
      */
-    public void setFirstName(String pFirstName) {
-        this.firstName = pFirstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     /**
      * Запис по батькові
-     * @param pMiddleName по батькові пацієнта
+     * @param middleName по батькові пацієнта
      */
-    public void setMiddleName(String pMiddleName) {
-        this.middleName = pMiddleName;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     /**
      * Запис прізвища
-     * @param pLastName прізвище пацієнта
+     * @param lastName прізвище пацієнта
      */
-    public void setLastName(String pLastName) {
-        this.lastName = pLastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     /**
-     * Запис адреси
-     * @param pAddress адреса пацієнта
+     * Запис домашньої адреси
+     * @param address адреса пацієнта
      */
-    public void setAddress(String pAddress) {
-        this.address = pAddress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     /**
      * Запис номера телефона
-     * @param pPhone номер телефона пацієнта
+     * @param phoneNumber номер телефону пацієнта
      */
-    public void setPhone(String pPhone) {
-        this.phone = pPhone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     /**
      * Запис номера медичної картки
-     * @param pMedicalRecordNumber номер медичної картки пацієнта
+     * @param medicalRecordNumber номер медичної картки пацієнта
      */
-    public void setMedicalRecordNumber(int pMedicalRecordNumber) {
-        this.medicalRecordNumber = pMedicalRecordNumber;
+    public void setMedicalRecordNumber(int medicalRecordNumber) {
+        this.medicalRecordNumber = medicalRecordNumber;
     }
 
     /**
      * Запис діагнозу
-     * @param pDiagnosis діагноз пацієнта
+     * @param diagnosis діагноз пацієнта
      */
-    public void setDiagnosis(String pDiagnosis) {
-        this.diagnosis = pDiagnosis;
+    public void setDiagnosis(String diagnosis) {
+        this.diagnosis = diagnosis;
     }
 
     /**
@@ -203,8 +180,8 @@ public class Patient {
      * Отримання номера телефона
      * @return номер телефона пацієнта
      */
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     /**
@@ -224,66 +201,12 @@ public class Patient {
     }
 
     /**
-     * Виведення інформації про пацієнта у вигляді рядка
+     * Отримання інформації про пацієнта у вигляді рядка
      */
-    public void getToString() {
-        System.out.println("ID: " + id + "\nПІБ: " + firstName + " " + middleName
-                + " " + lastName + "\nНомер медичної картки: " + medicalRecordNumber + "\nДіагноз: " + diagnosis + "\nАдреса: " + address + "\nНомер телефону: " + phone);
-    }
-
-    /**
-     * Виведення ID у вигляді рядка
-     */
-    public void getIDToString() {
-        System.out.print(id);
-    }
-
-    /**
-     * Виведення імені у вигляді рядка
-     */
-    public void getFirstNameToString() {
-        System.out.print(firstName);
-    }
-
-    /**
-     * Виведення по батькові у вигляді рядка
-     */
-    public void getMiddleNameToString() {
-        System.out.print(middleName);
-    }
-
-    /**
-     * Виведення прізвища у вигляді рядка
-     */
-    public void getLastNameToString() {
-        System.out.print(lastName);
-    }
-
-    /**
-     * Виведення адреси у вигляді рядка
-     */
-    public void getAddressToString() {
-        System.out.print(address);
-    }
-
-    /**
-     * Виведення номера телефона у вигляді рядка
-     */
-    public void getPhoneToString() {
-        System.out.print(phone);
-    }
-
-    /**
-     * Виведення номера медичної картки у вигляді рядка
-     */
-    public void getMedicalRecordNumberToString() {
-        System.out.print(medicalRecordNumber);
-    }
-
-    /**
-     * Виведення діагнозу у вигляді рядка
-     */
-    public void getDiagnosisToString() {
-        System.out.print(diagnosis);
+    @Override
+    public String toString() {
+        return ("ID: " + this.id + "\nПІБ: " + this.firstName + " " + this.middleName  + " " + this.lastName +
+                "\nНомер медичної картки: " + this.medicalRecordNumber + "\nДіагноз: " + this.diagnosis + "\nАдреса: " +
+                this.address + "\nНомер телефону: " + this.phoneNumber);
     }
 }
